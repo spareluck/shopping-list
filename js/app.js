@@ -12,7 +12,7 @@ $(document).ready(function() {
 	//Rename item when pencil Icon is clicked
 	$('.main').on('click','.rename' , function() {
   		var newItem = prompt("Please rename item");
-  		if( newItem != null || newItem == "" ) {
+  		if( newItem != null || newItem != "" ) {
   			$(this).siblings('span').text(newItem);
   		}
   	});
@@ -21,14 +21,16 @@ $(document).ready(function() {
   	 
 
 //Add new li to shopping list ul
-function appendLi() {
+function appendLi() { 
 	var newItem = $('.new-item').val();
+	if (newItem != "") {
 	$('.list-items ul').append("<li><input type='checkbox'><span>" + newItem + "</span>\
 								<button title='Delete Item' class='delete'>\
 								<i class='fa fa-ban'></i></button>\
 								<button title='Rename Item' class='rename'>\
 								<i class='fa fa-pencil'></i></button></li>");
 	$('.new-item').val("");
+	}
 }
 function enterKey(e) {
 	var key = e.which;
