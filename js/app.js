@@ -12,7 +12,7 @@ $(document).ready(function() {
 	//Rename item when pencil Icon is clicked
 	$('.main').on('click','.rename' , function() {
   		var newItem = prompt("Please rename item");
-  		if( newItem != null || newItem != "" ) {
+  		if( newItem != null && newItem != "" ) {
   			$(this).siblings('span').text(newItem);
   		}
   	});
