@@ -27,7 +27,7 @@ function appendLi() {
 								<i class='fa fa-ban'></i></button>\
 								<button title='Rename Item' class='rename'>\
 								<i class='fa fa-pencil'></i></button></li>");
-	$('new-item').val("");
+	$('.new-item').val("");
 }
 function enterKey(e) {
 	var key = e.which;
