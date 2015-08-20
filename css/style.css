@@ -1,3 +1,5 @@
+
+/* General Page Rules for Layout and Design*/
 body {
     font-size: 16px;
 	width: 100%;
@@ -6,14 +8,21 @@ body {
 	position: fixed;
 }
 
+ul {
+	margin: 1em 0 0;
+	padding: 0;
+}
+
 li {
 	list-style: none;
 	font-family: 'Handlee', cursive;
 	font-size: 1.5em;
 }
+
 li span {
 	padding-left: 1em;
 }
+
 h1 {
 	margin: 0;
 	padding-top: 0.5em;
@@ -21,6 +30,8 @@ h1 {
 	font-weight: bold;
 	font-family:'Oleo Script', Helvetica, sans-serif;
 }
+
+/* Main container Div Layout and Design */
 .main {
 	text-align: center;
 	background-color: white;
@@ -30,23 +41,8 @@ h1 {
 	position: relative;
 	overflow: scroll;
 }
-/*
-.main::before {
-    box-shadow:  5px 5px 10px rgba(0,   0,   0,   0.100); 
-        3px 3px   0 rgba(255, 255, 255, 1.0), 
-        4px 4px   0 rgba(0,   0,   0,   0.125), 
-        6px 6px   0 rgba(255, 255, 255, 1.0),  
-        7px 7px   0 rgba(0,   0,   0,   0.150), 
-        9px 9px   0 rgba(255, 255, 255, 1.0),  
-        10px 10px 0 rgba(0,   0,   0,   0.175);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-}
-*/
+
+/* Add Item button Layout and Design*/
 .add-item {
 	margin-left: 1em;
 	border-radius: 1em;
@@ -54,39 +50,32 @@ h1 {
 	padding: 0 15px;
 	vertical-align: bottom;
 }
+
 .add-item:hover {
 	box-shadow: inset 0 0 0 #27496d,0 4px 4px #193047;
 }
+
 .add-item:active {
 	background-color: #aaa;
 	color: white;
 }
+
+/* Input Text Design */
+
 input[type=text] {
 	font-size: 1.1em;
 	height: 1.6em;
 }
+
+/* Li layout and design */
+
 .list-items li {
-    max-width: 50%;
+    width: 70%;
     padding: 15px;
     border: 1px solid gray;
     text-align: left;
-    background-color: #efe;
+    background-color: #eee;
     margin: 0 auto;
-}
-.delete, .rename {
-	float: right;
-	border: none;
-	background-color: #efe;
-}
-.fa-ban {
-	color: red;
-}
-.fa-pencil {
-	color: blue;
-}
-}
-.fa-ban:hover {
-
 }
 .checked {
 	text-decoration: line-through;
@@ -95,3 +84,76 @@ input[type=text] {
 }
 .list-items li:hover {
   box-shadow: inset 0 0 0 #27496d,0 5px 15px #193047;
+}
+
+/* Button Layout and Design */
+.buttons button {
+	border: none;
+	background-color: #eee;
+}
+.buttons button:hover {
+	transform: scale(1.2);
+}
+.buttons {
+	float: right;
+}
+.fa-ban {
+	color: red;
+}
+.fa-pencil {
+	color: blue;
+}
+
+
+/* Responsive Design Layout and Design*/
+
+@media screen and (max-width: 1000px) {
+	.list-items li {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.main {
+		width: 98%;
+	}
+	.list-items li {
+		width: 95%;
+		padding: 5px 0 0 5px;
+	}
+	.buttons {
+		float: none;
+		margin-left: 1em;
+		padding: 0;
+}
+	.buttons button:hover {
+		transform: none;
+	}
+	li span {
+		padding-left: 8px;
+	}
+}
+@media screen and (max-width: 450px) {
+	li {
+		font-size: 1.25em;
+	}
+}
+@media screen and (max-width: 350px) {
+	li {
+		font-size: 1em;
+	}
+	h1 {
+		font-size: 3em;
+	} 
+	.add-item {
+		display: block;
+		margin: 0.5em auto;
+	}
+}
+@media screen and (max-width: 280px) {
+	h1 {
+		font-size: 2.5em;
+	}
+}
+
+
